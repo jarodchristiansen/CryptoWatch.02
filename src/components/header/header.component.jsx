@@ -19,7 +19,7 @@ const Header = ({ currentUser, hidden }) => (
     <img className="logo" src="https://img.icons8.com/nolan/64/block-chain.png"></img>
     </Link>
     <div className='options'>
-      <Link className='option' to='/shop'>
+      {/* <Link className='option' to='/shop'>
         SHOP
       </Link>
       <Link className='option' to='/shop'>
@@ -34,7 +34,7 @@ const Header = ({ currentUser, hidden }) => (
           SIGN IN
         </Link>
       )}
-      <CartIcon />
+      <CartIcon /> */}
     </div>
     {/* {hidden ? null : <CartDropdown />} */}
   </div>

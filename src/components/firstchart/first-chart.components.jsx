@@ -1,5 +1,6 @@
 import React from 'react';
 import './first-chart.styles.scss'
+import NewsContainer from '../news/news-container.component';
 
 import {
   XYPlot,
@@ -162,8 +163,7 @@ class FirstChart extends React.Component {
   render() {
     const { chartData, id, addressData, domData, globalDom, globalDominance, dominanceData } = this.state;
     return (
-      <div className='shop-page'>
-      <h1>{id}</h1>
+      <div className="topRow">
       <div className="chartContainer">
       <div className="addressHover">
                 <HoverHint
@@ -205,7 +205,7 @@ class FirstChart extends React.Component {
                   data={dominanceData}
                   strokeWidth={2.5}
                   stroke={"#E0115F"}
-                  style={{ backgroundColor: "green" }}
+                  style={{ backgroundColor: "white"}}
                   onNearestX={(datapoint, event) => {
                     this.setState({
                       domData: {
@@ -255,6 +255,9 @@ class FirstChart extends React.Component {
                 />
               </FlexibleXYPlot>
               </div>
+              <div className="newsContainer">
+              <NewsContainer id={this.state.id} />
+                </div>
       </div>
       
 

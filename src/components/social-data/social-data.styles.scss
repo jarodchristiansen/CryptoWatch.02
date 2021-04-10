@@ -1,0 +1,12 @@
+.socialPanel {
+    margin-top: 5vh;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+
+    .detail {
+        font-size: 1rem;
+        margin: 20px;
+    }
+}

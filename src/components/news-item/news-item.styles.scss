@@ -1,0 +1,34 @@
+.newsItem {
+    border: 1px solid white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.newsImage {
+    height: 75px;
+    width: 75px;
+}
+.detailsRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -20px;
+    padding-bottom: -20px;
+}
+
+.date {
+    margin: 20px;
+}
+.ImgContain {
+    display: flex;
+    flex-direction:row;
+    margin-left: 1vw;
+}
+
+.descriptionDetails {
+    font-size: .8rem;
+    margin-left: 1vw;
+}
+
+.newsAnchor {
+    color: white;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { TradingViewEmbed, widgetType } from "react-tradingview-embed";
 import FirstChart from '../../components/firstchart/first-chart.components';
+import NewsContainer from '../news/news-container.component';
 
 class SocialChart extends React.Component {
     constructor(props) {
@@ -17,12 +18,8 @@ class SocialChart extends React.Component {
     }
     render() {
       return (
-        <div className='shop-page'>
-          <div className="symbol-row">
-        <h2 className="symbol">{this.state.symbol} </h2><h2 className="symbol"> - {this.state.title}  - </h2><img className="symbol-image" src={this.state.imageURL} />
-        <p>{this.state.description}</p>
-          </div>
-          <div className="firstCharts">
+        <div>
+          <div>
         <TradingViewEmbed
                 widgetType={widgetType.ADVANCED_CHART}
                 widgetConfig={{
@@ -37,8 +34,11 @@ class SocialChart extends React.Component {
                   ]
                 }}
               />
-              <div className="marketDomChart">
+              <div>
+                  <div>
             <FirstChart id={this.state.id}/>
+         
+            </div>
               </div>
         </div>
         </div>

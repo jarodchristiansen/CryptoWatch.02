@@ -5,9 +5,24 @@
 .hoverHint {
     text-align: center;
     background-color:gray;
-    padding-top: -20px;
+    margin-bottom: 8vh;
+    height: 25vh;
 }
 
 .chartContainer {
     background-color: black;
+    width: 60%;
+}
+.topRow {
+    display:flex;
+    flex-direction:row;
+}
+.newsContainer {
+    background-color: black;
+    color: white;
+    max-width: 95%;
+    margin-left: 1vw;
+}
+.onChainChart {
+margin-right: 20vw;
 }
