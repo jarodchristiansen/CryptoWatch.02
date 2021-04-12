@@ -1,12 +1,12 @@
 .newsItem {
     border: 1px solid white;
-    width: 100%;
     margin-bottom: 10px;
+    margin-left: 1vw;
 }
 
 .newsImage {
-    height: 75px;
-    width: 75px;
+    max-height: 75px;
+    max-width: 75px;
 }
 .detailsRow {
     display: flex;

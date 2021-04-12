@@ -1,12 +1,18 @@
 .socialPanel {
     margin-top: 5vh;
-    width: 90%;
+    width: 45%;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
     justify-content: space-between;
 
     .detail {
-        font-size: 1rem;
+        font-size: .85rem;
         margin: 20px;
+    }
+    .positive {
+        color: green;
+    }
+    .negative {
+        color: red;
     }
 }

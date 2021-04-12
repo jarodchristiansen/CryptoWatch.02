@@ -11,7 +11,7 @@ const Ticker = () => (
             widgetType={widgetType.TICKER_TAPE}
             widgetConfig={{
               showSymbolLogo: true,
-              isTransparent: true,
+              isTransparent: false,
               displayMode: "adaptive",
               colorTheme: "dark",
               autosize: true,

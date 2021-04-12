@@ -4,25 +4,26 @@
 
 .hoverHint {
     text-align: center;
-    background-color:gray;
+    background-color: #0a1126;
     margin-bottom: 8vh;
+    margin-top: -2.5vh;
     height: 25vh;
 }
-
 .chartContainer {
-    background-color: black;
+    background-color: #0a1126;
     width: 60%;
 }
 .topRow {
+    margin-top: 2vh;
     display:flex;
     flex-direction:row;
+    width: 100%;
 }
 .newsContainer {
-    background-color: black;
+    background-color:#0a1126;
     color: white;
     max-width: 95%;
-    margin-left: 1vw;
 }
 .onChainChart {
-margin-right: 20vw;
+
 }

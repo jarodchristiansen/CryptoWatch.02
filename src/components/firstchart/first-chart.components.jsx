@@ -174,7 +174,7 @@ class FirstChart extends React.Component {
                   symbol={this.state.id}
                 />
               </div>
-              <FlexibleXYPlot className="onChainChart" height={400}>
+              <FlexibleXYPlot className="onChainChart" height={350}>
                 <VerticalBarSeries
                   data={chartData}
                   opacity={0.3}
@@ -240,22 +240,21 @@ class FirstChart extends React.Component {
                   tickValues={chartData.y}
                   // title={"Active Number of Addresses"}
                   style={{
-                    display: "none"
-                    // line: { stroke: "#ffffff", marginRight: 50 },
-                    // ticks: { stroke: "#fffff" },
-                    // text: {
-                    //   stroke: "none",
-                    //   fill: "#ffffff",
-                    //   fontWeight: 3,
-                    //   fontSize: 7,
-                    //   position: "start"
-                    // },
-                    // title: { fill: "#ffffff" }
+                    line: { stroke: "#ffffff", marginRight: 50 },
+                    ticks: { stroke: "#fffff" },
+                    text: {
+                      stroke: "none",
+                      fill: "#ffffff",
+                      fontWeight: 3,
+                      fontSize: 7,
+                      position: "start"
+                    },
+                    title: { fill: "#ffffff" }
                   }}
                 />
               </FlexibleXYPlot>
               </div>
-              <div className="newsContainer">
+            <div className="newsContainer">
               <NewsContainer id={this.state.id} />
                 </div>
       </div>
@@ -271,7 +270,7 @@ const HoverHint = ({ active, data, query, symbol, dom, global }) => (
     <p className="hoverData">
       {data.length > 1
         ? query
-        : symbol.toUpperCase() + "  - Global Market Cap ($USD)"}
+        : symbol.toUpperCase() + "  - Market Cap ($USD)/Market Dominance"}
     </p>
     <p className="hoverData">
       {data.length < 1 ? "" : data.time + " - " + formatter.format(data.price)}{" "}
