@@ -3,6 +3,7 @@ import { TradingViewEmbed, widgetType } from "react-tradingview-embed";
 import FirstChart from '../../components/firstchart/first-chart.components';
 import NewsItem from '../news-item/news-item.component';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class NewsContainer extends React.Component {
     constructor(props) {
@@ -16,8 +17,7 @@ class NewsContainer extends React.Component {
   
     loadChartData = async () => {
         const response = await fetch(
-          `https://api.lunarcrush.com/v2?data=feeds&key=688o9wuzvzst3uybpg6eh&symbol=${this.state.id}&limit=4&sources=news`
-          
+          `https://api.lunarcrush.com/v2?data=feeds&key=${API_KEY}&symbol=${this.state.id}&limit=4&sources=news`
           );
         const data = await response.json();
         // const dominanceData = [];
@@ -55,7 +55,7 @@ class NewsContainer extends React.Component {
         <div className="newsContainer">
             <h2>{this.state.id}</h2> 
             {newsDataArray.map((y) => {
-                return(<NewsItem props={y}/>)
+                return(<NewsItem key={y.description} props={y}/>)
             })}
          </div>
   

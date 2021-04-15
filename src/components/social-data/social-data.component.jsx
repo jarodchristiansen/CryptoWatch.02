@@ -1,6 +1,7 @@
 import React from 'react';
 import './social-data.styles.scss';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class SocialData extends React.Component {
     constructor(props) {
@@ -17,9 +18,7 @@ class SocialData extends React.Component {
 
     loadChartData = async () => {
         const response = await fetch(
-          `https://api.lunarcrush.com/v2?data=assets&key=688o9wuzvzst3uybpg6eh&symbol=${this.state.id}`
-          
-
+          `https://api.lunarcrush.com/v2?data=assets&key=${API_KEY}&symbol=${this.state.id}`
           );
         const data = await response.json();
         // const dominanceData = [];
@@ -28,7 +27,6 @@ class SocialData extends React.Component {
         // const socialDataRaw = [];
 
         const Data = data["data"][0];
-        console.log(Data)
         this.setState({
             average_sentiment: Data.average_sentiment,
             galaxy_score: Data.galaxy_score,

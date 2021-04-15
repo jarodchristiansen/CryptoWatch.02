@@ -2,6 +2,8 @@ import React from 'react';
 import './detail-panel.styles.scss';
 import SocialData from '../social-data/social-data.component';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 class DetailPanel extends React.Component {
     constructor(props) {
       super(props);
@@ -20,9 +22,7 @@ class DetailPanel extends React.Component {
   
     loadChartData = async () => {
         const response = await fetch(
-          `https://api.lunarcrush.com/v2?data=meta&key=688o9wuzvzst3uybpg6eh&symbol=${this.state.id}&type=full`
-
-
+          `https://api.lunarcrush.com/v2?data=meta&key=${API_KEY}&symbol=${this.state.id}&type=full`
           );
         const data = await response.json();
         // const dominanceData = [];
@@ -31,7 +31,6 @@ class DetailPanel extends React.Component {
         // const socialDataRaw = [];
 
         const Data = data["data"][0];
-        console.log(Data)
         this.setState({
             description: Data.description,
             forum: Data.forum_link,

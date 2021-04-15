@@ -14,7 +14,7 @@ class SocialChart extends React.Component {
   
       
       componentDidMount() {
-            console.log(this.state.id)
+            // console.log(this.state.id)
     }
     render() {
       return (

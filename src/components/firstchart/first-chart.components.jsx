@@ -24,6 +24,8 @@ var formatter = new Intl.NumberFormat("en-US", {
   //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
 });
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 
 class FirstChart extends React.Component {
   constructor(props) {
@@ -47,7 +49,7 @@ class FirstChart extends React.Component {
 
   loadChartData = async () => {
     const response = await fetch(
-      `https://api.lunarcrush.com/v2?data=assets&key=688o9wuzvzst3uybpg6eh&symbol=${this.state.id}&data_points=90&interval=day`
+      `https://api.lunarcrush.com/v2?data=assets&key=${API_KEY}&symbol=${this.state.id}&data_points=90&interval=day`
     );
     const data = await response.json();
     const dominanceData = [];
@@ -158,7 +160,7 @@ class FirstChart extends React.Component {
     componentDidMount() {
       this.loadChartData()
 
-          console.log(this.state.id)
+          // console.log(this.state.id)
   }
   render() {
     const { chartData, id, addressData, domData, globalDom, globalDominance, dominanceData } = this.state;
